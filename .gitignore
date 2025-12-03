@@ -1,0 +1,41 @@
+# Python cache files - ALWAYS IGNORED
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+dist/
+*.egg-info/
+
+# Recursive - catch cache files ANYWHERE
+**/__pycache__/
+**/*.pyc
+**/*.pyo
+**/*.pyd
+
+# Virtual environment
+venv/
+env/
+ENV/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Output files
+output/*.xlsx
+
+# API keys and config
+*.env
+src/config.py
+
+# Test results
+.pytest_cache/

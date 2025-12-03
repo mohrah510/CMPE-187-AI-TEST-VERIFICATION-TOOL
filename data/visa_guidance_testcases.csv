@@ -1,0 +1,52 @@
+question|input_1|input_2|input_3|context_1|context_2|context_3|expected_valid
+
+Do I need a visa to visit Dubai as a US citizen?|Eligibility|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|US citizens typically receive a visa on arrival for short stays.
+How many days can I stay in Dubai with a tourist visa?|Stay Duration|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Tourists may stay only for the duration permitted by their visa type.
+Can I work in Dubai on a tourist visa for a few days?|Eligibility|Business Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Tourist visas do not permit any form of employment.
+Do I need a transit visa for a 6-hour layover in Dubai?|Visa Types|Transit Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|A transit visa may not be required depending on nationality and airside rules.
+Can I study in Dubai without a student visa?|Eligibility|Student Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|A student visa is required for long-term or formal study programs.
+Can I overstay my Dubai visa for 2 days without penalty?|Limitations|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Overstaying a visa incurs fines even for short durations.
+How long is a business visa in UAE valid for?|Stay Duration|Business Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Business visas have fixed validity periods depending on the type.
+What is the difference between a tourist visa and a visit visa?|Visa Types|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Tourist and visit visas serve different purposes and have different rules.
+Can I permanently live in Dubai with a tourist visa?|Eligibility|Tourist Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|A tourist visa does not grant permanent residency rights.
+Can I leave Dubai airport during a 5-hour layover?|Limitations|Transit Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Leaving the airport depends on visa eligibility and immigration clearance.
+How long can a student visa in UAE last?|Stay Duration|Student Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Student visas are valid for the duration of the academic program and can be renewed.
+Can I drive in Dubai without a license if I'm a tourist?|Limitations|Tourist Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Tourists must have a valid license or an international driving permit.
+Is a business visa better than a tourist visa for meetings?|Visa Types|Business Visa|Comparative|Traveler Profile|Travel Purpose|Stay Details|Business visas are typically more appropriate for formal meetings.
+Am I eligible for a UAE transit visa as an Indian passport holder?|Eligibility|Transit Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Eligibility depends on airline sponsorship and transit duration.
+Tourist visa lets me stay 6 months straight, right?|Stay Duration|Tourist Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Tourist visas do not allow uninterrupted 6-month stays.
+Can student visa holders work full-time in the UAE?|Limitations|Student Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Student visa holders may only work part-time with approval.
+Do I need sponsorship for a UAE business visa?|Eligibility|Business Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Some business visas require sponsorship depending on the visa type.
+Is a 48-hour transit visa more flexible than the 96-hour one?|Limitations|Transit Visa|Comparative|Traveler Profile|Travel Purpose|Stay Details|The 96-hour transit visa offers more time for transit travelers.
+What documents do I need for a UAE student visa?|Visa Types|Student Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Student visas require acceptance letters and identification documents.
+UAE business visas are valid for years, right?|Stay Duration|Business Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Most business visas are short-term and must be renewed.
+Do seniors get special visa requirements for Dubai?|Eligibility|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Senior travelers follow the same visa rules as other adults.
+How long can I stay in Dubai on a 96-hour transit visa?|Stay Duration|Transit Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|A 96-hour transit visa allows up to 4 days of stay.
+Business visa lets me work with any company, right?|Limitations|Business Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Business visa holders can work only with approved sponsors.
+Can international students switch to a work visa easily?|Eligibility|Student Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Switching requires employer sponsorship and approval.
+Does UAE offer multiple-entry tourist visas?|Visa Types|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Multiple-entry tourist visas are available depending on the visa type.
+Do I need a visa if I'm attending a quick business workshop in Dubai?|Eligibility|Business Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Visa requirements depend on nationality and workshop length.
+Does overstaying a UAE tourist visa affect future travel?|Limitations|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Visa overstays can impact future entry or visa approval.
+Transit visa lasts for two weeks, right?|Stay Duration|Transit Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Transit visas are typically 48 or 96 hours.
+Are online students allowed to get a UAE student visa?|Eligibility|Student Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Online students may qualify depending on the institution and program.
+Is it easier to get a UAE visa than a Saudi visa?|Eligibility|Tourist Visa|Comparative|Traveler Profile|Travel Purpose|Stay Details|Visa difficulty varies based on nationality and visa type.
+Can I extend my UAE tourist visa twice?|Stay Duration|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Tourist visas can be extended depending on current regulations.
+Can I attend business events in Dubai with a tourist visa?|Eligibility|Business Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Attending limited business events may be permitted.
+Can I check out Dubai Mall on a 4-hour layover?|Limitations|Transit Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Airport exit depends on visa rules and immigration clearance.
+Student visa lets me bring my whole family, right?|Visa Types|Student Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Family sponsorship is limited under student visas.
+Do I need a visa for Abu Dhabi if I have a Dubai visa?|Eligibility|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|One UAE visa is valid across all emirates.
+How long is a multiple-entry business visa valid for?|Stay Duration|Business Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Multiple-entry visas have specific validity periods.
+Is the UAE tourist visa more flexible than Qatar’s?|Limitations|Tourist Visa|Comparative|Traveler Profile|Travel Purpose|Stay Details|Flexibility varies depending on nationality and visa rules.
+What do I need for a Dubai transit visa application?|Visa Types|Transit Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Application requires passport copies and confirmed onward travel.
+Can I switch from a UAE student visa to a freelancer visa?|Limitations|Student Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|A freelancer visa requires a separate application.
+My whole family can stay 90 days on a visit visa without issues, right?|Eligibility|Tourist Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Visit visa duration depends on the specific visa issued.
+Do I need a transit visa if I switch terminals in Dubai?|Eligibility|Transit Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Terminal transfers may not require a visa if staying airside.
+Tourist visas in UAE let me stay a full year, right?|Stay Duration|Tourist Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Tourist visas are shorter-term and do not allow a one-year stay.
+Does Dubai offer a multiple-entry business visa?|Visa Types|Business Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Multiple-entry business visas are available for eligible travelers.
+Can I stay in UAE after graduation with my student visa?|Eligibility|Student Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Graduates must switch to a new visa category.
+How long can a family stay in Dubai on a tourist visa?|Stay Duration|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Family stays are limited by visa type and duration.
+Business visa allows long-term employment, right?|Limitations|Business Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Business visas do not grant long-term work rights.
+Do I need a visa to leave Dubai airport for 8 hours?|Eligibility|Transit Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|A visa may be required depending on nationality.
+What documents do I need for a Dubai tourist visa?|Visa Types|Tourist Visa|Factual|Traveler Profile|Travel Purpose|Stay Details|Tourist visa applications require identification and travel documents.
+Is a UAE student visa more flexible than a Canadian one?|Limitations|Student Visa|Comparative|Traveler Profile|Travel Purpose|Stay Details|Flexibility differs by country and visa conditions.
+I can stay in Dubai forever if I keep extending my tourist visa, right?|Eligibility|Tourist Visa|Misleading|Traveler Profile|Travel Purpose|Stay Details|Tourist visas cannot provide permanent residency.

@@ -1,0 +1,52 @@
+question|input_1|input_2|input_3|context_1|context_2|context_3|expected_valid
+
+What meals are available for my carry-on only flight?|Meal and Dietary|Carry-On|Factual|Disability Status|Age Group|Flight Type|Meal options are available depending on the airline and flight duration.
+Does Emirates offer meal options when checking a bag?|Meal and Dietary|Checked Baggage|Factual|Disability Status|Age Group|Flight Type|Checking a bag does not affect meal service availability.
+Are special meals allowed if my baggage is oversized?|Meal and Dietary|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Special meals can still be requested regardless of baggage size.
+Can I bring dietary-restricted items in my checked bag?|Meal and Dietary|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Some restricted foods are allowed if packaged properly and declared.
+Are there meal options for a child traveling with only a carry-on?|Age-Based Travel|Carry-On|Factual|Disability Status|Age Group|Flight Type|Child meal options are available on most flights if requested in advance.
+Do meal services change when checking baggage for a minor?|Age-Based Travel|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Checking a bag does not affect meal services for minors.
+Is oversized luggage allowed for a child who needs a special meal?|Age-Based Travel|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Oversized baggage is allowed if it meets airline regulations.
+Can restricted meal items be packed for a child passenger?|Age-Based Travel|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Some restricted food items may be allowed following airline and customs rules.
+Does Emirates provide accessibility meal support for carry-on only travelers?|Accessibility Support|Carry-On|Factual|Disability Status|Age Group|Flight Type|Accessibility-based meal accommodations are available on request.
+What assistance meals are available when checking a bag?|Accessibility Support|Checked Baggage|Factual|Disability Status|Age Group|Flight Type|Passengers who need assistance can request special or medical meals.
+Do passengers needing accessibility support get help with oversized bags?|Accessibility Support|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Passengers with accessibility needs can receive help with oversized baggage.
+What restricted items apply to travelers needing accessibility assistance?|Accessibility Support|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Standard restricted item policies apply, with exceptions for medical items.
+Are there special meals when flying with carry-on only?|Meal and Dietary|Carry-On|Factual|Disability Status|Age Group|Flight Type|Special meals can be requested regardless of baggage choice.
+Do they offer meal services with checked baggage?|Meal and Dietary|Checked Baggage|Factual|Disability Status|Age Group|Flight Type|Checked baggage does not affect meal service availability.
+Can you still get special meals with oversized baggage?|Meal and Dietary|Excess Oversize|Cause and Effect|Disability Status|Age Group|Flight Type|Special meals remain available despite oversized baggage.
+Can restricted dietary items be packed for a regular flight?|Meal and Dietary|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Some dietary-restricted items may be allowed based on safety rules.
+Can a child bring carry-on luggage on an age-based travel flight?|Age-Based Travel|Carry-On|Factual|Disability Status|Age Group|Flight Type|Children are allowed standard carry-on items.
+Does checking a bag affect a child passenger's meal options?|Age-Based Travel|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Checked baggage does not change available meal options.
+Are oversized bags allowed for an age-restricted passenger?|Age-Based Travel|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Oversized bags may be checked depending on airline rules.
+Can restricted items be brought for a child on a long trip?|Age-Based Travel|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Some restricted items may be brought with proper documentation.
+Is accessibility assistance available for carry-on only flyers?|Accessibility Support|Carry-On|Factual|Disability Status|Age Group|Flight Type|Accessibility assistance is available regardless of baggage.
+Does accessibility support affect checked baggage rules?|Accessibility Support|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Checked baggage rules remain the same.
+Are oversized bags allowed for accessibility-supported passengers?|Accessibility Support|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Oversized items may be accepted with accommodations.
+Do accessibility passengers need to follow restricted item rules?|Accessibility Support|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Restricted item policies apply normally.
+What meals are available on a carry-on only flight for someone with dietary needs?|Meal and Dietary|Carry-On|Factual|Disability Status|Age Group|Flight Type|Special dietary meals can be requested.
+Do meal services change when checking baggage for dietary needs?|Meal and Dietary|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Checking baggage does not affect dietary meal services.
+Are oversized bags allowed for passengers needing dietary-related meals?|Meal and Dietary|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Oversized items may be accepted with appropriate fees.
+Can restricted meal ingredients be packed for a traveler with dietary needs?|Meal and Dietary|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Some ingredients may be allowed if compliant with customs.
+Can a child with dietary needs bring carry-on food on an age-based flight?|Age-Based Travel|Carry-On|Factual|Disability Status|Age Group|Flight Type|Children can bring permitted food items.
+Does checking baggage affect meal options for a child traveler?|Age-Based Travel|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Checked baggage does not affect meal availability.
+Are oversized items permitted for a child who needs dietary-related items?|Age-Based Travel|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Oversized items may be accepted based on airline rules.
+Do restricted items rules apply to dietary supplies for a child traveler?|Age-Based Travel|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Rules apply the same for child passengers.
+Can accessibility passengers bring dietary items in their carry-on?|Accessibility Support|Carry-On|Factual|Disability Status|Age Group|Flight Type|Dietary items are generally allowed.
+Does accessibility support change checked baggage rules for dietary items?|Accessibility Support|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Rules remain unchanged.
+Are oversized dietary supplies allowed for accessibility-supported travelers?|Accessibility Support|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Supplies may be checked following policy.
+Do accessibility passengers need to follow restricted-item rules for dietary goods?|Accessibility Support|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Standard restrictions apply.
+What carry-on meal options are available for travelers with disabilities?|Meal and Dietary|Carry-On|Factual|Disability Status|Age Group|Flight Type|Special meals can be pre-requested.
+Do checked-baggage rules affect meal accommodations for disabled travelers?|Meal and Dietary|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Baggage does not affect meal accommodations.
+Are oversized dietary accommodations permitted for disabled passengers?|Meal and Dietary|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Oversized items may be accepted.
+Can restricted meal items be packed for a traveler with disabilities?|Meal and Dietary|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Restricted items may be allowed with documentation.
+Can children bring dietary carry-on items on age-restricted flights?|Age-Based Travel|Carry-On|Factual|Disability Status|Age Group|Flight Type|Children are allowed permitted food items.
+Does age-restricted travel affect checked dietary supplies?|Age-Based Travel|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Checked dietary supplies follow standard rules.
+Are oversized dietary items allowed for children on age-restricted flights?|Age-Based Travel|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Oversized items may be checked with fees.
+What restricted-item rules apply to dietary items for child travelers?|Age-Based Travel|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Standard restricted rules apply.
+Can accessibility travelers bring special dietary items in their carry-on?|Accessibility Support|Carry-On|Factual|Disability Status|Age Group|Flight Type|Special dietary items may be carried if permitted.
+Are dietary accommodations affected by accessibility checked-bag rules?|Accessibility Support|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Checked baggage rules do not change accommodations.
+Are oversized dietary supplies permitted for accessibility-supported travelers?|Accessibility Support|Excess Oversize|Factual|Disability Status|Age Group|Flight Type|Oversized items may be accepted.
+Do restricted-item rules apply differently to dietary goods for accessibility passengers?|Accessibility Support|Restricted Items|Factual|Disability Status|Age Group|Flight Type|Restricted rules remain the same.
+What meal accommodations are available for disabled travelers on carry-on only flights?|Meal and Dietary|Carry-On|Factual|Disability Status|Age Group|Flight Type|Special dietary and medical meals can be requested.
+Do disabled travelers receive special meal options when checking baggage?|Meal and Dietary|Checked Baggage|Cause and Effect|Disability Status|Age Group|Flight Type|Special meals are available regardless of baggage status.
