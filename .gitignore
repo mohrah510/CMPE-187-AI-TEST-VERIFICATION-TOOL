@@ -39,3 +39,7 @@ src/config.py
 
 # Test results
 .pytest_cache/
+uploads/
+batch_console_dump.txt
+*.txt
+*.xlsx

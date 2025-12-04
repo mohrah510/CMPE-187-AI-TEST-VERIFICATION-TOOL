@@ -119,91 +119,196 @@ def are_words_similar(word1, word2):
     return False
 
 
-def count_keyword_matches(llm_answer, expected_keywords):
+def count_keyword_matches_simple(llm_answer, expected_keywords):
+    """
+    Simple regex matching approach (aligned with sample group).
+    Uses case-insensitive exact match like the C# implementation.
+    """
     if not llm_answer or not isinstance(llm_answer, str):
-        return 0
+        return 0, []
     
     if not expected_keywords:
-        return 0
+        return 0, []
+    
+    answer_lower = llm_answer.lower()
+    matches = 0
+    match_status = []
+    
+    for expected_word in expected_keywords:
+        # Simple case-insensitive regex match (like sample group's Regex.Match with IgnoreCase)
+        pattern = re.escape(expected_word.lower())
+        if re.search(pattern, answer_lower, re.IGNORECASE):
+            matches += 1
+            match_status.append(True)
+        else:
+            match_status.append(False)
+    
+    return matches, match_status
+
+
+def count_keyword_matches(llm_answer, expected_keywords):
+    """
+    Enhanced matching with similarity checking (current approach).
+    Also returns per-keyword match status for detailed analysis.
+    """
+    if not llm_answer or not isinstance(llm_answer, str):
+        return 0, []
+    
+    if not expected_keywords:
+        return 0, []
     
     answer_lower = llm_answer.lower()
     answer_words = set(re.findall(r'\b[a-z]{3,}\b', answer_lower))
     
     matches = 0
+    match_status = []
+    
     for expected_word in expected_keywords:
-        if expected_word in answer_lower:
+        matched = False
+        # First try exact match (case-insensitive)
+        if expected_word.lower() in answer_lower:
             matches += 1
+            matched = True
+            match_status.append(True)
         else:
-            matched = False
+            # Try similarity matching
             for answer_word in answer_words:
-                if are_words_similar(expected_word, answer_word):
+                if are_words_similar(expected_word.lower(), answer_word):
                     matches += 1
                     matched = True
+                    match_status.append(True)
                     break
             if not matched and len(expected_word) >= 4:
+                # Try partial match
                 for answer_word in answer_words:
-                    if expected_word[:3] in answer_word or answer_word[:3] in expected_word:
+                    if expected_word[:3].lower() in answer_word or answer_word[:3] in expected_word.lower():
                         matches += 1
+                        matched = True
+                        match_status.append(True)
                         break
+            
+            if not matched:
+                match_status.append(False)
     
-    return matches
+    return matches, match_status
 
 
-def calculate_score(llm_answer, expected_valid):
-    if not expected_valid or not isinstance(expected_valid, str) or not expected_valid.strip():
+def calculate_score_simple(matches, total_keywords):
+    """
+    Simple percentage calculation (aligned with sample group).
+    Formula: (matches / total) * 100
+    """
+    if total_keywords == 0:
         return 100.0
+    return round((matches / total_keywords) * 100.0, 2)
+
+
+def calculate_score(llm_answer, expected_valid, use_simple=False):
+    """
+    Calculate score using either simple or enhanced matching.
+    """
+    if not expected_valid or not isinstance(expected_valid, str) or not expected_valid.strip():
+        return 100.0, []
     
     expected_keywords = extract_keywords(expected_valid)
     
     if not expected_keywords:
-        return 100.0
+        return 100.0, []
     
-    matches = count_keyword_matches(llm_answer, expected_keywords)
-    
-    if len(expected_keywords) <= 2:
-        percentage = 100.0 if matches >= 1 else 80.0
-    elif len(expected_keywords) <= 5:
-        base = (matches / len(expected_keywords)) * 100.0
-        percentage = min(100.0, base * 2.5) if matches >= 1 else base
+    if use_simple:
+        matches, match_status = count_keyword_matches_simple(llm_answer, list(expected_keywords))
+        percentage = calculate_score_simple(matches, len(expected_keywords))
     else:
-        base = (matches / len(expected_keywords)) * 100.0
-        if matches >= 2:
-            percentage = min(100.0, base * 2.8)
-        elif matches >= 1:
-            percentage = min(100.0, base * 2.0)
+        matches, match_status = count_keyword_matches(llm_answer, list(expected_keywords))
+        # Enhanced scoring with multipliers
+        if len(expected_keywords) <= 2:
+            percentage = 100.0 if matches >= 1 else 80.0
+        elif len(expected_keywords) <= 5:
+            base = (matches / len(expected_keywords)) * 100.0
+            percentage = min(100.0, base * 2.5) if matches >= 1 else base
         else:
-            percentage = base
+            base = (matches / len(expected_keywords)) * 100.0
+            if matches >= 2:
+                percentage = min(100.0, base * 2.8)
+            elif matches >= 1:
+                percentage = min(100.0, base * 2.0)
+            else:
+                percentage = base
+        percentage = round(min(percentage, 100.0), 2)
     
-    return round(min(percentage, 100.0), 2)
+    return percentage, match_status
 
 
-def judge_llm_response(question, llm_answer, expected_valid, expected_invalid=None):
+def get_validity_reason(score, llm_answer, use_simple=False):
+    """
+    Get specific validity reason (aligned with sample group's approach).
+    """
+    if not llm_answer or len(llm_answer.strip()) == 0:
+        return "No Response"
+    
+    if score >= SCORE_THRESHOLD:
+        if use_simple:
+            return f"Response had relevant info with a correct rate of >= {SCORE_THRESHOLD}%"
+        else:
+            return f"Response had relevant info with a correct rate of >= {SCORE_THRESHOLD}%"
+    else:
+        return "Low Accuracy"
+
+
+def judge_llm_response(question, llm_answer, expected_valid, expected_invalid=None, use_simple=False):
+    """
+    Judge LLM response with per-keyword tracking and specific validity reasons.
+    
+    Args:
+        question: The question asked
+        llm_answer: The LLM's response
+        expected_valid: Expected valid response text
+        expected_invalid: Expected invalid response text (optional)
+        use_simple: If True, use simple regex matching (aligned with sample group)
+    
+    Returns:
+        Dictionary with score, validity, matched_keywords, total_keywords,
+        per_keyword_status, expected_keywords_list, and validity_reason
+    """
     if not expected_valid or not isinstance(expected_valid, str) or not expected_valid.strip():
         return {
             "score": 100.0,
             "validity": "Valid",
             "matched_keywords": 0,
-            "total_keywords": 0
+            "total_keywords": 0,
+            "per_keyword_status": [],
+            "expected_keywords_list": [],
+            "validity_reason": "No expected output specified"
         }
     
     expected_keywords = extract_keywords(expected_valid)
+    expected_keywords_list = list(expected_keywords)
     
     if not expected_keywords:
         return {
             "score": 100.0,
             "validity": "Valid",
             "matched_keywords": 0,
-            "total_keywords": 0
+            "total_keywords": 0,
+            "per_keyword_status": [],
+            "expected_keywords_list": [],
+            "validity_reason": "No keywords extracted from expected output"
         }
     
-    matches = count_keyword_matches(llm_answer, expected_keywords)
-    score = calculate_score(llm_answer, expected_valid)
+    score, match_status = calculate_score(llm_answer, expected_valid, use_simple=use_simple)
+    
+    # Count matches for backward compatibility
+    matches = sum(1 for status in match_status if status)
     
     validity = "Valid" if score >= SCORE_THRESHOLD else "Invalid"
+    validity_reason = get_validity_reason(score, llm_answer, use_simple=use_simple)
     
     return {
         "score": score,
         "validity": validity,
         "matched_keywords": matches,
-        "total_keywords": len(expected_keywords)
+        "total_keywords": len(expected_keywords),
+        "per_keyword_status": match_status,
+        "expected_keywords_list": expected_keywords_list,
+        "validity_reason": validity_reason
     }
